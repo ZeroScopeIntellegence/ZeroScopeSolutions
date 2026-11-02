@@ -85,11 +85,10 @@ body::after{content:'';position:fixed;inset:-15%;pointer-events:none;z-index:0;f
 /* centered 1100px column used by most home/blog sections */
 .terminal-wrap,.about-terminal-wrap,.section-divider,.divider,.featured-wrap,.view-all-wrap,
 .services-wrap,.practices-wrap,.filter-wrap,.page-hero{max-width:var(--maxw);margin-left:auto;margin-right:auto;padding-left:2rem;padding-right:2rem}
-.inline-flex-meta{display:flex;align-items:center;gap:8px}
 .inline-font-size{font-size:.62rem}
 
 /* Minecraft font on every display heading (add a selector to use it elsewhere) */
-.logo,nav a,.hero h1,.page-hero h1,.post-title,.entry-title,.stat-val,.service-title,
+nav a,.hero h1,.page-hero h1,.post-title,.entry-title,.stat-val,.service-title,
 .practice-title,.contact-heading,.step-num,.cert-name,
 .post-body h2,.post-body h3{font-family:var(--font-display);font-weight:400;font-synthesis:none;letter-spacing:.02em}
 
@@ -97,9 +96,6 @@ body::after{content:'';position:fixed;inset:-15%;pointer-events:none;z-index:0;f
 header{position:sticky;top:0;z-index:100;height:var(--header-h);padding:0 2rem;
   display:flex;align-items:center;justify-content:space-between;
   background:rgba(0,8,15,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
-.logo{font-size:1.1rem;color:var(--green);text-decoration:none;text-shadow:2px 2px 0 #5a0a1c,0 0 12px var(--green)}
-.logo span{color:var(--cyan)}
-.logo:hover{animation:glitch .3s linear}
 nav{display:flex;gap:2rem;align-items:center}
 nav a{font-size:.95rem;letter-spacing:.06em;color:var(--muted);text-decoration:none;transition:color .2s}
 nav a:hover,nav a.active{color:var(--green);text-shadow:0 0 8px var(--green)}
