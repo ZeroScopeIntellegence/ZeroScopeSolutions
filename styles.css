@@ -181,6 +181,19 @@ nav a:hover,nav a.active{color:var(--green);text-shadow:0 0 8px var(--green)}
 
 /* ===== 10. BLOGS PAGE ===== */
 .page-hero{padding-top:5rem;padding-bottom:2.5rem;animation:fadeUp .6s ease both}
+.article-search-wrap{position:relative;z-index:1;max-width:var(--maxw);margin:0 auto 2rem;padding:0 2rem}
+.article-search{display:flex;gap:.7rem;max-width:720px;margin:0 auto}
+.article-search input{flex:1;min-width:0;padding:.85rem 1rem;border:1px solid var(--border);outline:none;background:rgba(0,0,0,.45);
+  font-family:var(--font-mono);font-size:.82rem;color:var(--text);transition:border-color .2s,box-shadow .2s}
+.article-search input::placeholder{color:var(--muted)}
+.article-search input:focus{border-color:var(--green);box-shadow:0 0 12px rgba(255,43,77,.12)}
+.article-search button{padding:.75rem 1rem;border:1px solid var(--border);background:transparent;cursor:pointer;white-space:nowrap;
+  font-family:var(--font-mono);font-size:.68rem;letter-spacing:.08em;color:var(--green);transition:all .2s}
+.article-search button:hover{border-color:var(--green);background:var(--green-glow)}
+.search-results,.no-search-results{max-width:720px;margin:.7rem auto 0;font-family:var(--font-mono);font-size:.72rem;color:var(--muted)}
+.no-search-results{text-align:center;margin:0 auto 4rem;padding:1rem 2rem}
+.no-search-results.hidden{display:none}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .filter-wrap{display:flex;flex-wrap:wrap;align-items:center;gap:.7rem;margin-bottom:1rem}
 .filter-label{margin-right:.4rem;font-family:var(--font-mono);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
 .filter-btn{padding:.55rem .9rem;border:1px solid var(--border);background:transparent;cursor:pointer;
@@ -326,5 +339,18 @@ footer{display:flex;justify-content:space-between;align-items:center;flex-wrap:w
   .hero-stats{gap:1.5rem}
   .featured-content,.service-card{padding:1.5rem}
   .status-grid{grid-template-columns:1fr}
-  .page-hero,.filter-wrap,.divider,.articles-wrap{padding-left:1rem;padding-right:1rem}
+  .page-hero,.filter-wrap,.divider,.articles-wrap,.article-search-wrap{padding-left:1rem;padding-right:1rem}
+  .article-search{flex-wrap:wrap}
+  .article-search button{width:100%}
+
+
+
+  * {
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+
+  }
 }
