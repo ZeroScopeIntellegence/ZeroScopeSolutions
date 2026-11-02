@@ -67,23 +67,47 @@
   /* ===== 3b. BLOGS PAGE: filter buttons + article list (from BLOGS) ===== */
   if ($("blog-list")) {
     const topics = [...new Set(BLOGS.map(b => b.topic))];
+    const searchInput = $("blog-article-search");
+    const results = $("search-results");
+    const noResults = $("no-search-results");
+    let activeFilter = "all";
+
     $("blog-filters").innerHTML = '<span class="filter-label">// Filter</span>' +
       ["All", ...topics].map((t, i) => `<button class="filter-btn${i ? "" : " active"}" data-filter="${esc(t.toLowerCase())}">${esc(t)}</button>`).join("");
     $("blog-list").innerHTML = BLOGS.map((b, i) => {
       const href = b.url || b.file;
-      return `<a class="article-entry" data-cat="${esc(b.topic.toLowerCase())}" href="${esc(href)}"${ext(href)}>
+      return `<a class="article-entry" data-cat="${esc(b.topic.toLowerCase())}" data-search="${esc([b.title, b.topic, b.summary || "", b.date || ""].join(" ").toLowerCase())}" href="${esc(href)}"${ext(href)}>
         <div class="entry-top"><span class="entry-date">// ${esc([b.date, b.topic, b.read].filter(Boolean).join(" · ").toUpperCase())}</span>${i === 0 ? '<span class="badge-new">New</span>' : ""}</div>
         <div class="entry-title">${esc(b.title)}</div>
         <p class="entry-excerpt">${esc(b.summary || "")}</p>
       </a>`;
     }).join("");
+
+    const updateArticles = () => {
+      const query = searchInput.value.trim().toLowerCase();
+      let visibleCount = 0;
+      document.querySelectorAll(".article-entry").forEach(article => {
+        const matchesFilter = activeFilter === "all" || article.dataset.cat === activeFilter;
+        const matchesSearch = !query || article.dataset.search.includes(query);
+        const isVisible = matchesFilter && matchesSearch;
+        article.classList.toggle("hidden", !isVisible);
+        if (isVisible) visibleCount++;
+      });
+
+      results.textContent = query ? `${visibleCount} ${visibleCount === 1 ? "article" : "articles"} found.` : "";
+      noResults.classList.toggle("hidden", visibleCount > 0);
+    };
+
+    searchInput.value = new URLSearchParams(window.location.search).get("q") || "";
+    searchInput.addEventListener("input", updateArticles);
     const btns = document.querySelectorAll(".filter-btn");
     btns.forEach(btn => btn.addEventListener("click", () => {
       btns.forEach(x => x.classList.remove("active"));
       btn.classList.add("active");
-      document.querySelectorAll(".article-entry").forEach(a =>
-        a.classList.toggle("hidden", btn.dataset.filter !== "all" && a.dataset.cat !== btn.dataset.filter));
+      activeFilter = btn.dataset.filter;
+      updateArticles();
     }));
+    updateArticles();
   }
 
 })();
