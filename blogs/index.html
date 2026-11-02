@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ZeroScope Solutions Blogs</title>
+<title>Search Articles | ZeroScope Solutions Blogs</title>
 <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
@@ -16,12 +16,23 @@
   <p>// Pick a topic or scroll the full list.</p>
 </section>
 
+<!-- ===== SEARCH BAR ===== -->
+<div class="article-search-wrap">
+  <form class="article-search" action="index.html" method="get" role="search">
+    <label class="sr-only" for="blog-article-search">Search articles</label>
+    <input id="blog-article-search" type="search" name="q" placeholder="Search titles, topics, and descriptions..." autocomplete="off">
+    <button type="submit">// SEARCH →</button>
+  </form>
+  <p class="search-results" id="search-results" aria-live="polite"></p>
+</div>
+
 <!-- ===== TOPIC FILTER (buttons are built from BLOGS in content.js) ===== -->
 <div class="filter-wrap" id="blog-filters"></div>
 <div class="divider"><span>// ALL ARTICLES</span></div>
 
 <!-- ===== ARTICLE LIST (built from BLOGS in content.js, section B) ===== -->
 <div class="articles-wrap" id="blog-list"></div>
+<p class="no-search-results hidden" id="no-search-results">No articles match your search or topic filter.</p>
 
 <div class="view-all-wrap">
   <a href="https://www.linkedin.com/newsletters/zeroscope-solutions-7384806620419178496/" target="_blank" class="view-all-btn">// View All Articles on LinkedIn →</a>
