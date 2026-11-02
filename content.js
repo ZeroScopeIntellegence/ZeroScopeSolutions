@@ -24,6 +24,8 @@ const LINKS = {
             summary= one-line description (optional)
             url    = optional: link to an outside article instead of a file */
 const BLOGS = [
+  { file:"ai.html", title:"Understanding AI, Model Context Protocol (MCP), and Security", topic:"AI", date:"November 2026", read:"20 min read",
+    summary:"Model Context Protocol (MCP) is a standardized way for AI applications to communicate with external systems. Here's how it works and how to secure it." },
   { file:"post-vpn.html", title:"What is a VPN?", topic:"Networking", date:"June 2026", read:"5 min read",
     summary:"Without a VPN, your traffic is visible to anyone on the network. Here's what's actually happening under the hood." },
   { file:"post-firewalls.html", title:"Understanding Firewall Types", topic:"Networking", date:"June 9, 2026", read:"5 min read",
