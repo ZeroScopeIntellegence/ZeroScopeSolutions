@@ -23,9 +23,6 @@
   ];
   const header = `
 <header>
-  <div class="inline-flex-meta">
-    <a href="${BASE}index.html">WIL<span>.</span>DENNISON</a>
-  </div>
   <nav>${NAV.map(n => `<a href="${n[1]}"${ext(n[1])}${n[2] === ACTIVE ? ' class="active"' : ""}>${n[0]}</a>`).join("")}</nav>
   <span class="nav-tag">// ZEROSCOPE SOLUTIONS</span>
 </header>`;
