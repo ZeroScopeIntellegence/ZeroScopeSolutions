@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Understanding AI, Model Context Protocol (MCP), and Security // ZeroScope Solutions</title>
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<!-- Header (nav) is added by site.js -->
+<div class="post-header">
+  <div class="breadcrumb">
+    <a href="../index.html">Home</a>
+    <span>/</span>
+    <a href="index.html">Blog</a>
+    <span>/</span>
+   Understanding AI, Model Context Protocol (MCP), and Security
+  </div>
+
+  <div class="post-tags">
+    <span class="post-tag">AI</span>
+        <span class="post-tag">Model Context Protocol</span>
+        <span class="post-tag">Security</span>
+    <span class="post-tag">MCP</span>
+        <span class="post-tag">Servers</span>
+    </div>
+
+
+
+    <div class="post-title">Understanding AI, Model Context Protocol (MCP), and Security
+</div>
+
+    <div class="post-meta-bar">
+    <span class="meta-label">Published</span>
+    <span class="meta-val">November 2026</span>
+    <span class="meta-sep">·</span>
+    <span class="meta-label">Author</span>
+    <span class="meta-val">Wil Dennison</span>
+    <span class="meta-sep">·</span>
+    <span class="meta-label">Read time</span>
+    <span class="meta-val">20 min read</span>
+  </div>
+</div>
+
+
+
+<!--Article-->
+
+<div class="post-body">
+  
+  <p>In today's generation, artificial intelligence (AI) has become one of the biggest topics in technology. Many people use AI to complete everyday tasks, including personal and professional activities. This is one of the fastest-growing areas of technology, with people relying on tools such as ChatGPT, Claude, and Gemini as on-demand assistants, coaches, and advisors.
+But AI is more than just a chatbot. It can interact with external applications, retrieve information, analyze data, and even execute certain tasks when given the appropriate permissions.
+</p>
+  
+  <hr class="post-divider">
+
+
+  <h2>What is AI and how does it work?</h2>
+
+  <p>Artificial intelligence (AI) is a collection of technologies that allows computers to perform tasks that traditionally require human intelligence, such as understanding language, recognizing patterns, analyzing information, and generating recommendations.
+</p>
+  <p>AI systems are developed using large amounts of training data. During training, models identify patterns and relationships within that data, which helps them generate responses and predictions when given new information.</p>
+<p>The quality, quantity, and relevance of training data can influence how well an AI model performs. However, AI systems do not automatically become more knowledgeable every time someone interacts with them. Their capabilities depend on how they were trained and how they are configured.</p>
+  
+<hr class="post-divider">
+
+
+<h2>What kinds of AI models are there?</h2>
+<p>There are several categories of AI models, each designed for different purposes and workloads.</p>
+
+<h3>Large Language Models (LLMs)</h3>
+<p>Large language models are trained on extensive datasets and are designed to understand and generate human language. They can support conversations, summarize information, write code, analyze data, and assist with multi-step problem-solving.</p>
+
+<h3>Small Language Models (SLMs)</h3>
+<p>Small language models are designed to operate with fewer computing resources than larger models. They can be useful for specific tasks, local applications, and environments where lower memory usage and reduced processing requirements are important.</p>
+
+<h3>Frontier Models</h3>
+<p>Frontier models are among the most advanced AI models available. They generally require significant computing resources for training and operation and are designed to handle increasingly complex tasks, reasoning, and problem-solving.</p>
+
+  <hr class="post-divider">
+
+<h2>Could AI be used as servers?</h2>
+<p>Could AI be used as servers?
+Yes. 
+AI can operate on specialized server infrastructure.
+According to Cisco, AI servers are specialized computing systems designed to host and execute AI workloads. They provide the hardware environment, compute accelerators, memory, storage, and high-speed interconnects required for intensive processing, data movement, and parallel execution.
+These systems are commonly used for machine learning training and inference.
+However, there is another type of server technology that caught my attention, and that is the main topic I will be covering today: Model Context Protocol (MCP) servers.
+It is important to understand that MCP servers are not necessarily AI servers. Instead, they act as a communication layer between AI applications and external systems</p>
+
+  <hr class="post-divider">
+
+
+<h2>What is Model Context Protocol (MCP)?</h2>
+<p>There are many VPN services available today, but a few stand out because of their security features, performance, and ease of us, Here are some popular VPN providers:</p>
+<P>MCP allows AI applications, such as ChatGPT and Claude, to interact with different types of data sources, tools, and workflows.</P>
+<p>These resources can include local files, databases, search engines, calculators, and specialized applications.</p>
+<p>By establishing a standardized method of communication, MCP enables AI systems to access relevant information and perform tasks beyond their built-in capabilities.</p>
+<p>This makes MCP an important technology for improving how AI applications interact with external resources and supporting more practical and flexible uses of artificial intelligence.</p>
+
+
+<hr class="post-divider">
+
+<h3>How do MCP servers work?</h3>
+<p>MCP uses a client-server architecture that allows AI applications to communicate with external services.</p>
+
+<h2>There are three main components:</h2>
+
+<h3>1. MCP Host</h3>
+<p>The host is the AI application that users interact with. Examples include applications that support MCP integrations.</p>
+
+<h3>2. MCP Client</h3>
+<p>The client manages the connection between the AI application and an MCP server. It communicates with the server using the MCP standard.</p>
+
+<h3>3. MCP Server</h3>
+<p>The server provides access to external resources and tools. Depending on its configuration, it can retrieve information, interact with databases, access files, or perform specific operations.</p>
+
+<p>For example, imagine asking an AI assistant to retrieve information from a database. Instead of manually opening the database and searching for information, the AI application can communicate with an MCP server that has access to the database.</p>
+<p>The MCP server processes the request, retrieves the authorized information, and returns the results to the AI application.</p>
+<p>This allows the AI assistant to work with external systems through a standardized connection.</p>
+
+  <hr class="post-divider">
+
+
+<h2>MCP Servers and Security</h2>
+<p>Now that we understand how MCP servers work, let's discuss something that should always be considered when connecting external applications and services: cybersecurity.</p>
+<p>MCP introduces additional security considerations because AI applications may receive permission to interact with sensitive resources, databases, files, and business applications.</p>
+<p>Although MCP provides a standardized communication method, it does not automatically make every connection secure. The security of an MCP environment depends on how the client, server, permissions, and connected resources are configured.</p>
+
+
+
+<hr class="post-divider">
+
+
+<h2>Here are some security concerns worth understanding.</h2>
+
+<h3>1. Prompt Injection</h3>
+<p>Prompt injection is one of the major security concerns involving AI applications.</p>
+<p>An attacker may place malicious instructions inside external content, such as a webpage, document, or database record. When an AI application retrieves that information through an MCP server, those instructions could influence the model's behavior.</p>
+<p>For example, an AI assistant connected to a company database might retrieve a document containing instructions designed to convince the AI to disclose information it should not share.</p>
+<p>This is why external content must be treated as untrusted data rather than instructions that the AI should automatically follow.</p>
+
+<h3>2. Unauthorized Access</h3>
+<p>MCP servers can provide access to sensitive resources depending on the permissions they receive.</p>
+<p>If an MCP server is configured with excessive privileges, an AI application could potentially access information or perform operations beyond what is necessary.</p>
+<p>For example, a database MCP server that only needs to retrieve records should not automatically receive permission to modify or delete database information.</p>
+<p>Organizations should follow the principle of least privilege, granting each server only the permissions required to perform its intended function.</p>
+
+<h3>3. Credential and Data Exposure</h3>
+<p>Another important security concern is protecting sensitive information.</p>
+<p>MCP servers may require credentials, API keys, access tokens, or other authentication methods to communicate with external services.</p>
+<p>If these credentials are stored insecurely, exposed through application logs, or shared between services, attackers could potentially gain unauthorized access.</p>
+<p>Organizations should protect credentials using secure secret-management solutions, restrict access to authentication tokens, and avoid storing sensitive information directly in source code.</p>
+
+
+<h3>4. Untrusted MCP Servers</h3>
+<p>Not every MCP server available online should automatically be trusted.</p>
+<p>Third-party servers may contain vulnerable dependencies, insecure configurations, or malicious code.</p>
+<p>Before connecting an MCP server, organizations should investigate its source, review its permissions, inspect its code when available, and understand what resources it can access.</p>
+<p>Running an untrusted MCP server with unrestricted access to a computer or internal network could introduce unnecessary security risks.</p>
+
+
+<hr class="post-divider">
+
+<h2>How Can We Secure MCP Servers?</h2>
+<p>There are several security practices that organizations and developers should consider when deploying MCP servers.</p>
+
+<h3>Principle of Least Privilege</h3>
+<p>Only grant MCP servers the permissions they need. Avoid providing unrestricted access to databases, file systems, cloud environments, or internal applications.</p>
+
+<h3>Authentication and Authorization</h3>
+<p>Implement appropriate authentication and authorization mechanisms to verify users and control which resources they can access.</p>
+
+<h3>Network Segmentation</h3>
+<p>Keep MCP servers isolated from sensitive systems when possible. Restrict network communication to the services and destinations required for their operation.</p>
+
+<h3>Input and Output Validation</h3>
+<p>Validate information received by MCP servers and carefully handle the data returned to AI applications. Never assume that information retrieved from external sources is trustworthy.</p>
+
+<h3>Logging and Monitoring</h3>
+<p>Monitor MCP server activity, authentication attempts, tool executions, and access to sensitive resources. Logging can help security teams identify unusual behavior and investigate potential incidents.</p>
+
+<h3>Human Approval</h3>
+<p>Require user confirmation before performing sensitive operations, such as modifying records, deleting files, or making changes to important systems.</p>
+<p>These practices can help reduce the attack surface and improve the overall security of an MCP environment.</p>
+
+
+<h2>Final Thoughts</h2>
+<p>Artificial intelligence continues to change how people interact with technology. What started as tools for answering questions and generating content is becoming a much larger ecosystem capable of interacting with external applications, databases, and infrastructure.</p>
+<p>Model Context Protocol is an important part of this development because it provides a standardized way for AI applications to communicate with external services.</p>
+<p>However, as organizations begin adopting MCP, cybersecurity must remain a priority. Connecting AI applications to internal systems introduces additional responsibilities involving authentication, authorization, data protection, and monitoring.</p>
+<p>AI can make everyday tasks easier and improve productivity, but giving an AI application access to external systems should never mean giving it unrestricted access.</p>
+<p>Understanding how MCP works and how to secure it will become increasingly important as AI-powered applications continue to evolve.</p>
+
+<p class="post-hashtag">#StayCuriousStaySharp</p>
+
+
+
+<!--Footer-->
+<div class="post-footer">
+  <a class="back-btn" href="index.html">Back to Blog</a>
+  <a class="linkedin-btn" href="https://www.linkedin.com/newsletters/zeroscope-solutions-7384806620419178496/" target="_blank">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1。771 24h20。451C23。２ ２４ ２４ ２３。２２７ ２４ ２２。２７１V１。７２９C２４ 。７７４ ２３。２ ０ ２２。２２２ 。０h。００３z"/></svg>
+    View on LinkedIn ↗
+  </a>
+</div>
+
+
+
+<!-- ===== SCRIPTS: site.js adds the shared header and footer (edit them in site.js) ===== -->
+<script src="../content.js"></script>
+<script src="../site.js" data-base="../" data-active="blogs"></script>
+</body>
+</html>
