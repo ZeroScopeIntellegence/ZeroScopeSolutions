@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Network Traffic Analysis // ZeroScope Solutions</title>
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<!-- Header (nav) is added by site.js -->
+<div class="post-header">
+  <div class="breadcrumb">
+    <a href="../index.html">Home</a><span>/</span>
+    <a href="index.html">Blog</a><span>/</span>
+    Network Traffic Analysis
+  </div>
+  <div class="post-tags">
+    <span class="post-tag">Threat Analysis</span>
+    <span class="post-tag">Networking</span>
+    <span class="post-tag">Wireshark</span>
+  </div>
+  <h1 class="post-title">Network Traffic Tells the Full Story of What's Happening Inside a Network</h1>
+  <p class="post-subtitle">A system can appear clean and show no alerts — yet its network communications may tell a completely different story.</p>
+  <div class="post-meta-bar">
+    <span class="meta-label">Published</span>
+    <span class="meta-val">December 23, 2025</span>
+    <span class="meta-sep">·</span>
+    <span class="meta-label">Author</span>
+    <span class="meta-val">Wil Dennison</span>
+    <span class="meta-sep">·</span>
+    <span class="meta-label">Read time</span>
+    <span class="meta-val">6 min read</span>
+  </div>
+</div>
+
+<div class="post-body">
+
+  <p>In both networking and cybersecurity, network traffic shows how devices and systems communicate with each other. Every time a website loads, an email is sent, or a server is accessed, data is exchanged in the form of packets. By looking at this traffic, we can understand what systems are communicating, how they are communicating, and whether that behavior makes sense within the environment.</p>
+
+  <h2>Wireshark — Seeing Inside the Network</h2>
+
+  <p>Wireshark is one of the most effective tools for understanding what's happening on a network. It is a powerful, free network analyzer that is perfect for home labs, servers, and network analysts. It allows users to capture and inspect live network traffic, providing clear visibility into how systems communicate across a network.</p>
+
+  <p>By breaking down packets into detailed, readable information, Wireshark makes it easier to:</p>
+
+  <ul>
+    <li>Troubleshoot connectivity and performance issues</li>
+    <li>Analyze suspicious or unexpected traffic</li>
+    <li>Identify insecure protocols transmitting sensitive data</li>
+    <li>Understand overall network behavior and baselines</li>
+  </ul>
+
+  <h2>FTP — A Real-World Example of Insecure Traffic</h2>
+
+  <p>A good example of why traffic analysis matters is File Transfer Protocol (<code>FTP</code>) on port <code>21</code>. FTP sends usernames and passwords in plaintext. When this traffic is captured in Wireshark, credentials can be read directly from the packets — no decryption needed.</p>
+
+  <div class="warning">
+    <div class="warning-label">// Real Demonstration</div>
+    When logging into a server internally using FTP, an insecure password along with the <code>ftpuser</code> account was used to demonstrate just how easily credentials can be exposed. The username and password appeared in plain text inside the captured packets — visible to anyone with access to the network traffic.
+  </div>
+
+  <p>This clearly demonstrates how insecure protocols can expose sensitive information and why encrypted alternatives such as <code>SFTP</code> or <code>FTPS</code> should always be used instead.</p>
+
+  <hr class="post-divider">
+
+  <h2>What Network Traffic Reveals in Cybersecurity</h2>
+
+  <p>Analyzing network traffic helps uncover behavior that may otherwise go unnoticed. A system can appear clean and show no alerts, yet its network communications may tell a different story. Defenders should watch for:</p>
+
+  <ul>
+    <li>Repeated connection attempts to the same internal host</li>
+    <li>Unexpected communication with external IPs or domains</li>
+    <li>Unusual timing patterns — traffic at odd hours or in large bursts</li>
+    <li>Protocols on non-standard ports</li>
+    <li>Unencrypted transmission of credentials or sensitive data</li>
+  </ul>
+
+  <p>These patterns are often early signs of compromise. Watching for them allows defenders to investigate and respond before real damage is done.</p>
+
+  <div class="callout">
+    <div class="callout-label">// Key Takeaway</div>
+    Network traffic tells the full story of what is happening within a network. It helps establish normal behavior, identify weak configurations, and detect potential threats early. If you can read network traffic, you can understand both performance issues and security risks — before they escalate into incidents.
+  </div>
+
+  <p class="post-hashtag">#StayCuriousStaySharp</p>
+
+</div>
+
+<div class="post-footer">
+  <a class="back-btn" href="index.html">Back to Blog</a>
+  <a class="linkedin-btn" href="https://www.linkedin.com/pulse/network-traffic-tells-full-story-whats-happening-inside-wil-dennison/" target="_blank">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+    View on LinkedIn ↗
+  </a>
+</div>
+
+
+<!-- ===== SCRIPTS: site.js adds the shared header and footer (edit them in site.js) ===== -->
+<script src="../content.js"></script>
+<script src="../site.js" data-base="../" data-active="blogs"></script>
+</body>
+</html>
