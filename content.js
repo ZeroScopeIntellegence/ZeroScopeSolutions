@@ -67,5 +67,5 @@ const PRACTICES = [
   { title:"Use MFA everywhere",  text:"Prefer hardware keys or authenticator apps over SMS codes." },
   { title:"Log and monitor",     text:"You can't respond to what you can't see. Centralize logs and set alerts." },
   { title:"Think like an attacker", text:"Run authorized tests to find gaps before real attackers do." },
-  { title:"Back up and rehearse",text:"Keep offline backups and practice restoring them before you need them." }
+  { title:"Back up and restore",text:"Keep offline backups and practice restoring them before you need them." }
 ];
