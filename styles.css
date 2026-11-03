@@ -345,6 +345,51 @@ footer{display:flex;justify-content:space-between;align-items:center;flex-wrap:w
 
 
 
+
+  /* ===== 17. DOCS PAGE =====
+   Paste this block into styles.css (just above "16. RESPONSIVE" is fine).
+   Reuses your existing variables, header/nav, .post-body, .callout, code and footer styles. */
+.docs-layout{position:relative;z-index:1;display:grid;grid-template-columns:310px 1fr;min-height:calc(100vh - var(--header-h))}
+.docs-layout main{min-width:0}
+
+/* sidebar */
+.docs-sidebar{position:sticky;top:var(--header-h);align-self:start;height:calc(100vh - var(--header-h));overflow:auto;padding:1.8rem 1.4rem;background:rgba(26,3,8,.7);border-right:1px solid var(--border)}
+.docs-prompt{margin-bottom:.8rem;padding-bottom:1.3rem;border-bottom:1px solid var(--border);font-family:var(--font-mono);font-size:.8rem;color:#fff}
+.docs-prompt b{font-weight:400;color:var(--green)}
+.docs-prompt i{display:inline-block;width:.55em;height:1em;margin-left:3px;vertical-align:-2px;background:var(--green);animation:blink 1s steps(1) infinite}
+.docs-sidebar summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;padding:1rem .6rem;font-family:var(--font-mono);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:#a8606c}
+.docs-sidebar summary::-webkit-details-marker{display:none}
+.docs-sidebar summary::after{content:'▸';font-size:.65rem;transition:transform .15s}
+.docs-sidebar details[open]>summary::after{transform:rotate(90deg)}
+.docs-sidebar details[open]>summary,.docs-sidebar summary:hover{color:var(--green)}
+.docs-page{display:block;margin:0 0 .4rem 1.2rem;padding:.55rem .9rem;font-family:var(--font-mono);font-size:.85rem;color:#a8606c;text-decoration:none;border-left:2px solid var(--border);transition:all .2s}
+.docs-page:hover{color:#fff;border-left-color:var(--green)}
+.docs-page.on{color:var(--green);border-left:3px solid var(--green);background:var(--green-glow);text-shadow:0 0 8px var(--green)}
+.docs-sidebar a:focus-visible,.docs-sidebar summary:focus-visible{outline:2px solid var(--green);outline-offset:2px}
+
+/* pages (one visible at a time) */
+.doc{display:none}
+.doc.on{display:block;animation:fadeUp .5s ease both}
+.docs-article .post-title{text-shadow:4px 4px 0 #5a0a1c}      /* blocky shadow like the hero */
+.docs-article .doc-lead{margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid var(--border);font-family:var(--font-mono);font-size:1.05rem;line-height:1.7;color:#edf9ff}
+
+/* GitHub project cards */
+.repos{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.6rem}
+.repo{display:block;padding:1rem 1.2rem;text-decoration:none;background:rgba(255,43,77,.03);border:1px solid var(--border);border-left:3px solid var(--green);transition:all .2s}
+.repo:hover{background:var(--green-glow);box-shadow:0 0 14px rgba(255,43,77,.15)}
+.repo strong{display:block;margin-bottom:.3rem;font-family:var(--font-display);font-size:.95rem;font-weight:400;color:#fff}
+.repo span{display:block;font-size:.88rem;line-height:1.55;color:var(--prose)}
+.repo small{display:block;margin-top:.5rem;font-family:var(--font-mono);font-size:.7rem;color:#a8606c}
+
+@media (max-width:900px){
+  .docs-layout{grid-template-columns:1fr}
+  .docs-sidebar{position:static;height:auto;border-right:0;border-bottom:1px solid var(--border)}
+}
+@media (max-width:700px){.repos{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.doc.on,.docs-prompt i{animation:none}}
+
+
+
   * {
 
     box-sizing: border-box;
