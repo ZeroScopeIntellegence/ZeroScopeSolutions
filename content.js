@@ -6,7 +6,7 @@
 /* ===== A. YOUR LINKS (used in the nav, footer and cards) ===== */
 const LINKS = {
   linkedin:   "https://www.linkedin.com/in/wil-dennison-9a48a028a/",
-  github:     "https://github.com/runnindead",
+  github:     "https://github.com/zeroscopeintelligence",
   gitlab:     "https://gitlab.com/runnindead",
   medium:     "https://medium.com/@zeroscopesolutions",
   newsletter: "https://www.linkedin.com/newsletters/zeroscope-solutions-7384806620419178496/"
